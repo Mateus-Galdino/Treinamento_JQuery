@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Crash Course | Events</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: lightgray;
+            line-height: 1.5em;
+        }
+
+        header{
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px #000 solid;
+            margin-bottom: 10px;
+        }
+
+        #container{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body id="body">
+    <header>
+        <h1>JQuery Crash Course</h1>
+    </header>
+    <div id="container">
+        <h3>Mouse Events</h3>
+        <button id="btn1" class="btn-class">Button 1</button>
+        <button id="btn2">Button 2</button>
+        <p class="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis suscipit repudiandae at ullam. 
+            Enim voluptatum unde ratione, maiores voluptatem corporis velit, 
+            ea blanditiis laudantium iusto nihil minus tenetur? Exercitationem, explicabo! 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Ducimus delectus aliquam sequi obcaecati 
+            harum voluptatum incidunt ratione nulla esse, 
+            tenetur maiores porro animi pariatur. Quis tenetur
+             ullam natus culpa excepturi.</p>
+
+             <form>
+                <label>Name</label> <br>
+                <input type="text" id="name" name="name">
+                <br>
+                <label>Email</label> <br>
+                <input type="email" id="email" name="email">
+                <br>
+                <label>Gender</label><br>
+                <select name="gender" id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                <br>
+                </select>
+                <br>
+                <input type="submit" value="Submit"> <br>
+                <br>
+             </form>
+    </div>
+
+    <script>
+        /*
+
+                                Script para fazer um botão criar um alert
+
+    $(document).ready(function(){
+        $('#btn1').click(function(){
+            alert('Botão clicado!')
+        })
+    });
+    */ 
+
+        /*
+
+                                            Mesma coisa que em cima
+
+    $('#btn1').on('click',function(){
+        alert('Botão clicado!')
+    })
+
+    */
+
+    /*
+
+                                        Fazendo botões interagirem com textos
+
+    $('#btn1').on('click',function(){
+        //$('.para1').hide() // Esconde o parágrafo
+        $('.para1').toggle(); // Evento que permite esconder e mostrar o parágrafo
+    })
+
+    $('#btn2').on('click',function(){
+        $('.para1').show() // Evento show mostra o texto
+    })
+
+    */
+
+    /*
+                                       Evento doubleclick
+
+    $('#btn1').on('dblclick',function(){
+        $('.para1').toggle();
+    })
+
+    */
+
+    /*
+                                        Evento hover - evento que ocorre quando o mouse entra no botão
+
+    $('#btn1').hover(function(){
+        $('.para1').toggle();
+
+    })
+
+    */
+
+    /*
+                            Evento mousemove - relacionado ao movimento do mouse dentro do compartimento
+
+   $('#btn1').on('mousemove',function(){
+       $('.para1').toggle();
+   })
+
+   */
+
+   /*
+
+                                        Eventos mouseup e mousedown
+
+   $('#btn1').on('mousedown',function(){
+        $('.para1').toggle();
+   })
+
+   $('#btn1').on('mouseup',function(){
+       $('.para1').toggle();
+   })
+
+   */
+
+  /*
+                                Captura de eventos
+
+  $('#btn1').click(function(e){
+       //alert(e.currentTarget.id);
+       // alert(e.currentTarget.innerHTML);
+       // alert(e.currentTarget.outerHTML);
+       alert(e.currentTarget.className)
+   })
+
+   $(document).on('mousemove',function(e){
+       console.log('Coords X: ' + e.clientX + 'Coords Y: ' + e.clientY);
+   })
+
+   */
+
+   $('input').focus(function(){
+        $('input#name').css('background-color','purple')
+   })
+
+    </script>
+</body>
+</html>
