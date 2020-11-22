@@ -1,3 +1,5 @@
+<!-- Link para a aula: https://www.youtube.com/watch?v=VlWsJHsVb-E-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,12 +48,12 @@
             tenetur maiores porro animi pariatur. Quis tenetur
              ullam natus culpa excepturi.</p>
 
-             <form>
+             <form id="form">
                 <label>Name</label> <br>
                 <input type="text" id="name" name="name">
                 <br>
                 <label>Email</label> <br>
-                <input type="email" id="email" name="email">
+                <input type="text" id="email" name="email">
                 <br>
                 <label>Gender</label><br>
                 <select name="gender" id="gender">
@@ -160,9 +162,38 @@
 
    */
 
+   /*
+
+                                        Eventos focus e blur
+
    $('input').focus(function(){
-        $('input#name').css('background-color','purple')
-   })
+        $(this).css('background','pink')
+   });
+
+   $('input').blur(function(){
+        $(this).css('background','white')
+   });
+
+   $('input').keyup(function(e){
+       console.log(e.target.value)
+   });
+
+   */
+
+   /*
+                                                Eventos change e submit
+
+   $('select#gender').change(function(e){
+       alert(e.target.value)
+   });
+
+   $('#form').submit(function(e){
+       e.preventDefault();
+       var name = $('input#name').val();
+       console.log(name)
+   });
+
+   */
 
     </script>
 </body>
